@@ -2,8 +2,6 @@
 
 A gamification system for eLearning where learners **prove what they learned** to earn stickers. No paid tools or LMS integrations required—just HTML, CSS, and JavaScript.
 
-![Sticker Book Demo](demo.gif)
-<!-- Replace with your actual GIF once you record it -->
 
 ## ✨ Features
 
