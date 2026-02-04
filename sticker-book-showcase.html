@@ -85,6 +85,22 @@
             font-family: 'Permanent Marker', cursive;
         }
         
+        /* Template banner */
+        .template-banner {
+            background: #e8f5e9;
+            border: 2px dashed var(--green);
+            padding: 15px 25px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        
+        .template-banner p {
+            margin: 0;
+            font-size: 1rem;
+            color: #2e7d32;
+        }
+        
         /* Section */
         .section {
             margin: 50px 0;
@@ -296,6 +312,10 @@
             <h1>Sticker Book <span>Template</span></h1>
             <p class="tagline">A quiz-gated gamification system for eLearning. Learners prove what they learned to earn stickers. No paid tools required.</p>
         </header>
+        
+        <div class="template-banner">
+            <p>🎨 <strong>This is a customizable template!</strong> The stickers, quiz questions, colors, and branding are all yours to change. Fork the repo and make it your own.</p>
+        </div>
         
         <div class="demo-callout">
             <p><strong>👉 Try it now!</strong> Click the pink "Stickers" tab on the right side of this page.</p>
@@ -517,7 +537,7 @@ localStorage.getItem('sticker_book_v1')</pre>
       certificateFooter: 'Congratulations!'
     };
 
-    var COMPLETION_IMAGE = '';
+    var COMPLETION_IMAGE = 'https://i.ibb.co/4wp55Hrq/Chat-GPT-Image-Jan-18-2026-01-02-04-PM.png';
 
     var COLORS = {
       primary: '#ff6b9d',
