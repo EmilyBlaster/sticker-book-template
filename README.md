@@ -19,8 +19,7 @@ A gamification system for eLearning where learners **prove what they learned** t
 
 ## 🎮 Live Demo
 
-**[Try the interactive demo →](https://yourusername.github.io/sticker-book-template/sticker-book-showcase.html)**
-<!-- Update this URL after you enable GitHub Pages -->
+**[Try the interactive demo →](https://emilyblaster.github.io/sticker-book-template/sticker-book-showcase.html))**
 
 Click the pink "Stickers" tab on the right side of the page to see it in action!
 
@@ -28,8 +27,7 @@ Click the pink "Stickers" tab on the right side of the page to see it in action!
 
 This sticker book was built for **The People's Professors**, a course about how TikTok creators use sophisticated teaching strategies. 
 
-**[View the full course →](https://emilygreendesign.com)**
-<!-- Update with your actual course link -->
+**[View the full course →](https://www.emilygreendesign.com/interactives))**
 
 ## 🛠️ Installation
 
