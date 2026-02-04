@@ -657,6 +657,10 @@ localStorage.getItem('sticker_book_v1')</pre>
     .pp-celebrate p{font-family:'Courier Prime',monospace;font-size:1.1rem;color:rgba(255,255,255,.9);margin-bottom:30px}
     .pp-celebrate-btn{background:#FFD700;color:${COLORS.text};border:none;padding:15px 30px;font-family:'Permanent Marker',cursive;font-size:1.1rem;border-radius:8px;cursor:pointer;box-shadow:0 4px 20px rgba(255,215,0,.4)}
     .pp-celebrate-btn:hover{transform:scale(1.05)}
+    .pp-celebrate-sticker{max-width:200px;height:auto;display:block;margin:0 auto 25px;animation:bounce .6s ease infinite alternate;filter:drop-shadow(0 0 30px rgba(255,215,0,0.4))}
+    @keyframes bounce{0%{transform:translateY(0) rotate(-3deg)}100%{transform:translateY(-15px) rotate(3deg)}}
+    .pp-congrats-sticker{margin-bottom:20px}
+    .pp-congrats-sticker img{max-width:180px;height:auto;filter:drop-shadow(2px 4px 6px rgba(0,0,0,0.2));animation:stickerPlace .5s ease-out}
     .pp-print{display:none;font-family:'Courier Prime',monospace;max-width:600px;margin:0 auto;padding:40px;background:#fff}
     .pp-print.printing{display:block;position:fixed;top:0;left:0;right:0;bottom:0;z-index:999999;overflow:auto}
     .pp-print-header{text-align:center;margin-bottom:30px;padding-bottom:20px;border-bottom:3px double ${COLORS.text}}
@@ -866,10 +870,10 @@ localStorage.getItem('sticker_book_v1')</pre>
         '<div class="pp-header"><h1 class="pp-title">' + BRANDING.bookTitle + '</h1><p class="pp-subtitle">' + BRANDING.bookSubtitle + '</p><p class="pp-instructions">' + BRANDING.instructions + '</p><p class="pp-progress"><span id="ppCollected">0</span> of <span id="ppTotal">' + STICKERS.length + '</span> collected</p></div>' +
         '<div class="pp-grid" id="ppGrid"></div>' +
         '<div class="pp-footer"><p class="pp-footer-text">' + BRANDING.footerText + '</p><p class="pp-cooldown" id="ppCooldown"></p></div>' +
-        '<div class="pp-unlock"><div class="pp-unlock-divider"><span>✦ SECRET UNLOCKED ✦</span></div><div class="pp-unlock-content"><h2 class="pp-unlock-title">' + BRANDING.unlockTitle + '</h2><p class="pp-unlock-message">' + BRANDING.unlockMessage + '</p><button class="pp-print-btn" id="ppPrintBtn">🖨 Print My Collection</button></div></div>' +
+        '<div class="pp-unlock"><div class="pp-unlock-divider"><span>✦ SECRET UNLOCKED ✦</span></div><div class="pp-unlock-content"><h2 class="pp-unlock-title">' + BRANDING.unlockTitle + '</h2><p class="pp-unlock-message">' + BRANDING.unlockMessage + '</p>' + (COMPLETION_IMAGE ? '<div class="pp-congrats-sticker"><img src="' + COMPLETION_IMAGE + '" alt="Congratulations!"></div>' : '') + '<button class="pp-print-btn" id="ppPrintBtn">🖨 Print My Collection</button></div></div>' +
         '</div><button class="pp-close" id="ppCloseBtn">× Close</button></div></div>' +
         '<div class="pp-quiz" id="ppQuiz"><div class="pp-quiz-box"><div class="pp-confetti" id="ppQuizConfetti"></div><button class="pp-quiz-close" id="ppQuizClose">×</button><p class="pp-quiz-instruction">Tap the answer you think is correct</p><div class="pp-quiz-question" id="ppQuizQuestion"></div><div class="pp-quiz-answers" id="ppQuizAnswers"></div><div class="pp-quiz-feedback" id="ppQuizFeedback"></div></div></div>' +
-        '<div class="pp-celebrate" id="ppCelebrate"><div class="pp-celebrate-inner"><h2>Collection Complete!</h2><p>You\'ve unlocked something special…</p><button class="pp-celebrate-btn" id="ppCelebrateBtn">See My Reward →</button></div></div>' +
+        '<div class="pp-celebrate" id="ppCelebrate"><div class="pp-celebrate-inner">' + (COMPLETION_IMAGE ? '<img src="' + COMPLETION_IMAGE + '" alt="Congratulations!" class="pp-celebrate-sticker">' : '') + '<h2>Collection Complete!</h2><p>You\'ve unlocked something special…</p><button class="pp-celebrate-btn" id="ppCelebrateBtn">See My Reward →</button></div></div>' +
         '<div class="pp-print" id="ppPrint"><button class="pp-print-close" id="ppPrintClose">× Close</button><div class="pp-print-header"><h1>' + BRANDING.bookSubtitle + '</h1><p>' + BRANDING.certificateTitle + '</p><p id="ppPrintDate"></p></div><div class="pp-print-cert"><h2>' + BRANDING.certificateTitle + '</h2><p>' + BRANDING.certificateText + '</p></div><div class="pp-print-stickers" id="ppPrintStickers"></div><div class="pp-print-footer"><p>' + BRANDING.certificateFooter + '</p></div></div>';
       document.body.appendChild(c);
       document.getElementById('ppTab').onclick = openPanel;
