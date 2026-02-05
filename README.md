@@ -19,7 +19,7 @@ A gamification system for eLearning where learners **prove what they learned** t
 
 ## 🎮 Live Demo
 
-**[Try the interactive demo →]((https://emilyblaster.github.io/sticker-book-template/sticker-book-showcase.html))**
+**[Try the interactive demo →](https://emilyblaster.github.io/sticker-book-template/sticker-book-showcase.html)**
 <!-- Update this URL after you enable GitHub Pages -->
 
 Click the pink "Stickers" tab on the right side of the page to see it in action!
